@@ -11,7 +11,7 @@ while True:
         break
 
 
-
+    numbers = sorted(numbers)
     len_numbers = len(numbers)
     if len_numbers % 2 ==0:
         tot = numbers[len_numbers/2] + numbers[(len_numbers/2)-1]
