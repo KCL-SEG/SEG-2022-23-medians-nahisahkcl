@@ -10,13 +10,17 @@ while True:
     else:
         break
 
-
     numbers = sorted(numbers)
-    len_numbers = len(numbers)
-    if len_numbers % 2 ==0:
-        tot = numbers[len_numbers/2] + numbers[(len_numbers/2)-1]
-        median = tot/2
-        return median
+    len = len(numbers)
+    if len ==0:
+        return 0
+    elif len == 1:
+        return numbers[0]
+    elif len % 2 == 0:
+        n1 = numbers[len // 2]
+        n2 = numbers[len//2 -1 ]
+        return (n1 + n2)/2
     else:
-        median = numbers[(len_numbers-1)/2]
+        return numbers[len//2]
+
 print(numbers)
